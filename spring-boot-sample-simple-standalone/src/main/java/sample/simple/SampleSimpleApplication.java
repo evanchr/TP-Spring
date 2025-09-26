@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import sample.simple.client.IRun;
-import sample.simple.service.HelloWorldService;
 
 @SpringBootApplication
 public class SampleSimpleApplication implements CommandLineRunner {
@@ -19,7 +18,10 @@ public class SampleSimpleApplication implements CommandLineRunner {
     private IRun irun;
 
     public void run(String... args) {
-        this.irun.run();
+        System.out.println("----------- Scénario 1 ------------");
+        this.irun.scenario1();
+        System.out.println("----------- Scénario 2 ------------");
+        this.irun.scenario2();
     }
 
     public static void main(String[] args) throws Exception {

@@ -18,4 +18,20 @@ public class Client implements IRun {
     public void run() {
         System.out.println("C'est parti vavan");
     }
+    @Override
+    public void scenario1() {
+        if (justHaveALook.isAvalaible("Banana") && justHaveALook.getPrice("Banana") < 3) {
+            fastLane.oneShotOrder("Banana", 3, "IBAN Client");
+        } else {
+            System.out.println("Banana n'est pas disponible ou trop cher.");
+        }
+    }
+    @Override
+    public void scenario2() {
+        if (justHaveALook.isAvalaible("Banana") && justHaveALook.getPrice("Banana") < 3) {
+            lane.addItemToCart("Pomme", 3);
+            double montantTotal = justHaveALook.getPrice("Pomme") * 3;
+            lane.pay("IBAN Client", montantTotal);
+        }
+    }
 }

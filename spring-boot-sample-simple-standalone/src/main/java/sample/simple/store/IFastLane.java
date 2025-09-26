@@ -1,5 +1,5 @@
 package sample.simple.store;
 
 public interface IFastLane {
-    void oneShotOrder(int quantity);
+    void oneShotOrder(String productName, int quantity, String compteClient);
 }

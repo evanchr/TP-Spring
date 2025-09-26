@@ -1,5 +1,5 @@
 package sample.simple.bank;
 
 public interface IBank {
-    void transfert(String compte1, String compte2);
+    void transfert(String compteClient, String compteStore, double montant);
 }
